@@ -76,3 +76,17 @@ for(var i =0;i<number.length;i++){
         }
     });
 }
+// Add event listeners for dot and double zero buttons
+document.getElementById("dot").addEventListener('click', function() {
+    var output = getOutput();
+    if (!output.includes(".")) {
+        output = output + ".";
+        printOutput(output);
+    }
+});
+
+document.getElementById("doublezero").addEventListener('click', function() {
+    var output = getOutput();
+    output = output + "00";
+    printOutput(output);
+});
